@@ -1,0 +1,50 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5652616bbdf0 .scope module, "odd_parity" "odd_parity" 2 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 8 "data_in";
+    .port_info 1 /OUTPUT 1 "parity";
+L_0x565261707300 .functor XOR 1, L_0x565261707160, L_0x565261707230, C4<0>, C4<0>;
+L_0x5652617074b0 .functor XOR 1, L_0x565261707300, L_0x565261707410, C4<0>, C4<0>;
+L_0x565261707720 .functor XOR 1, L_0x5652617074b0, L_0x5652617075c0, C4<0>, C4<0>;
+L_0x565261707880 .functor XOR 1, L_0x565261707720, L_0x5652617077e0, C4<0>, C4<0>;
+L_0x565261707aa0 .functor XOR 1, L_0x565261707880, L_0x5652617079c0, C4<0>, C4<0>;
+L_0x565261707c50 .functor XOR 1, L_0x565261707aa0, L_0x565261707bb0, C4<0>, C4<0>;
+L_0x565261707fa0 .functor XOR 1, L_0x565261707c50, L_0x565261707da0, C4<0>, C4<0>;
+v0x5652616bbf80_0 .net *"_ivl_1", 0 0, L_0x565261707160;  1 drivers
+v0x5652617063d0_0 .net *"_ivl_11", 0 0, L_0x5652617075c0;  1 drivers
+v0x5652617064b0_0 .net *"_ivl_12", 0 0, L_0x565261707720;  1 drivers
+v0x565261706570_0 .net *"_ivl_15", 0 0, L_0x5652617077e0;  1 drivers
+v0x565261706650_0 .net *"_ivl_16", 0 0, L_0x565261707880;  1 drivers
+v0x565261706780_0 .net *"_ivl_19", 0 0, L_0x5652617079c0;  1 drivers
+v0x565261706860_0 .net *"_ivl_20", 0 0, L_0x565261707aa0;  1 drivers
+v0x565261706940_0 .net *"_ivl_23", 0 0, L_0x565261707bb0;  1 drivers
+v0x565261706a20_0 .net *"_ivl_24", 0 0, L_0x565261707c50;  1 drivers
+v0x565261706b00_0 .net *"_ivl_27", 0 0, L_0x565261707da0;  1 drivers
+v0x565261706be0_0 .net *"_ivl_3", 0 0, L_0x565261707230;  1 drivers
+v0x565261706cc0_0 .net *"_ivl_4", 0 0, L_0x565261707300;  1 drivers
+v0x565261706da0_0 .net *"_ivl_7", 0 0, L_0x565261707410;  1 drivers
+v0x565261706e80_0 .net *"_ivl_8", 0 0, L_0x5652617074b0;  1 drivers
+o0x7f3fa20302b8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x565261706f60_0 .net "data_in", 7 0, o0x7f3fa20302b8;  0 drivers
+v0x565261707040_0 .net "parity", 0 0, L_0x565261707fa0;  1 drivers
+L_0x565261707160 .part o0x7f3fa20302b8, 0, 1;
+L_0x565261707230 .part o0x7f3fa20302b8, 1, 1;
+L_0x565261707410 .part o0x7f3fa20302b8, 2, 1;
+L_0x5652617075c0 .part o0x7f3fa20302b8, 3, 1;
+L_0x5652617077e0 .part o0x7f3fa20302b8, 4, 1;
+L_0x5652617079c0 .part o0x7f3fa20302b8, 5, 1;
+L_0x565261707bb0 .part o0x7f3fa20302b8, 6, 1;
+L_0x565261707da0 .part o0x7f3fa20302b8, 7, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "odd_parity.v";
