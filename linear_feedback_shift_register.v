@@ -17,7 +17,7 @@ reg [7:0] out;              //8-bit register for output
 
 wire feedback;              //feedback wire
 
-assign feedback = !(out[7] ^ out[3]);       //feedback is the XOR of the 7th and 3rd bit
+assign feedback = !(out[7] ^ out[3]);       //feedback is the XNOR of the 7th and 3rd bit
 
 always @(posedge clk)begin                  
     if (reset) begin                        //reset out to 0 whenever reset is high
