@@ -23,7 +23,7 @@ module sp_ram_sync_rw(
 
     reg [DATA_WIDTH-1:0] data_out;          // the data output 8bit
     reg [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];   // the memory 8x8bit
-    reg oe_r;                                   // the output enable register
+    // reg oe_r;                                   // the output enable register
 
     assign data = (cs && oe && !we) ? data_out : 8'bz;  // the data bus; if True, data_out, else 8'bz
 
