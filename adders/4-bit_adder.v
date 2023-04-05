@@ -1,48 +1,16 @@
 `timescale 1ns/1ps
 
-
-// half adder
-// module half_addr (a,b, c, s);
-
-//     input a, b;
-//     output c, s;
-
-//     wire a,b, c,s;
-
-//     assign s = a ^ b;
-//     assign c = a & b;
-
-// endmodule
-
-
-// // full adder
-// module full_addr(x,y,z, c,s);
-
-//     input x,y,z;
-//     output c,s;
-
-//     wire x,y,z,c,s;
-//     wire i1,i2,i3;
-
-//     half_addr ha1(x,y, i1, i2);
-//     half_addr ha2(i1,z, i3, s);
-
-//     assign c = i2 || i3;
-
-// endmodule
-
-
 module full_addr(
     input a, b, c_in,
     output sum, c_out);
 
     wire n1, n2, n3;
 
-    xor (n1, a,b);
-    xor (sum, n1,c_in);
-    and (n2, n1,c_in);
-    and (n3, a,b);
-    or (c_out, n2,n3);
+    xor (n1,    a,b);
+    xor (sum,   n1,c_in);
+    and (n2,    a,b);
+    and (n3,    n1,c_in);
+    or  (c_out, n2,n3);
 endmodule
 
 
